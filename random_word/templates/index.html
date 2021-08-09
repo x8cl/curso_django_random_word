@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Random Word{% endblock %}
+{% block header %}Random word attemp #{{ request.session.contador }}{% endblock %}
+{% block subheader %}{{ word }}{% endblock %}
+{% block content %}
+<a class="btn btn-primary" href="{% url 'random_word:generate' %}" role="button">Generate</a>
+<a class="btn btn-danger" href="{% url 'random_word:home' %}" role="button">Reset</a>
+{% endblock %}
